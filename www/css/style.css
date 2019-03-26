@@ -1,10 +1,13 @@
 /**/
-.display{
-  height:90px;
-  font-size:50px;
+#txtSexo{
+  font-size:30px;
 }
-.linha{
-  margin-top: 10px;
+.op{
+  font-size:20px;
 }
 
-
+input[type="radio"] {
+    -ms-transform: scale(2.5); /* IE 9 */
+    -webkit-transform: scale(5.5); /* Chrome, Safari, Opera */
+    transform: scale(1.5);
+}
