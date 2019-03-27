@@ -18,23 +18,89 @@
   </script>  
 </head>
 <body>
-  <div class="jumbotron text-center">
-    <h1>Calculo do Metabolismo Basal</h1>
+  <div class="jumbotron text-center" style="background-color: #0d0d0d; border-radius:20px;">
+    <h4>Calculo de Metabolismo Basal</h4>
   </div>
   <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-          <label id="txtSexo"> Sexo:</label>
+    <div id="SX">
+      <div class="row">
+        <div class="col-xs-12">
+           <label id="txtSexo"> Sexo:</label>
+        </div>
+     </div>
+      <div class="row">
+       <div class="col-xs-12 op">
+         <label class="radio-inline">
+           <input type="radio" onclick="Etapa1()" name="optradioSX" value="Masculino"> Masculino
+          </label>
+          <label class="radio-inline">
+            <input type="radio" onclick="Etapa1()" name="optradioSX" value="Feminino">Feminino
+          </label>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-xs-12 op">
-        <label class="radio-inline">
-          <input type="radio" name="optradio" checked> Masculino
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="optradio">Feminino
-        </label>
+    <div id="TA" hidden>
+      <div class="row" >
+        <div class="col-xs-12">
+            <label id="txtSexo"> Sexo:[✓]      </label><button onclick="cancelsx()">Cancel</button><br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 op">
+          <label id="txtSexo"> Taxa de Atividade:</label>
+          <label class="radio-inline">
+           <input type="radio" name="optradioTA" onclick="Etapa2()" value="1.2"> Sedentário<br>(pouco ou nenhum exercício)
+          </label><br>
+          <label class="radio-inline">
+            <input type="radio" name="optradioTA" onclick="Etapa2()" value="1.375"> Levemente ativo<br>(exercício leve 1 a 3 dias por semana) 
+          </label><br>
+          <label class="radio-inline">
+           <input type="radio" name="optradioTA" onclick="Etapa2()"  value="1.55"> Moderadamente ativo<br> (exercício moderado, faz esportes 3 a 5 dias por semana)
+         </label><br>
+         <label class="radio-inline">
+            <input type="radio" name="optradioTA" onclick="Etapa2()"  value="1.725"> Altamente ativo<br>(exercício pesado de 5 a 6 dias por semana)
+          </label><br>
+         <label class="radio-inline">
+            <input type="radio" name="optradioTA" onclick="Etapa2()" value="1.9"> Extremamente ativo<br> (exercício pesado diariamente e até 2 vezes por dia) 
+         </label>
+        </div>
+     </div>
+   </div>
+   <div id="IM" hidden>
+      <div class="row">
+        <div class="col-xs-12">
+          <label id="txtSexo"> Sexo:[✓]      </label><button onclick="cancelsx()">Cancel</button><br>
+          <label id="txtSexo"> Taxa de Atividade:[✓] </label><button onclick="cancelta()">Cancel</button><br>
+           <label id="txtSexo"> Dados Pessoais:</label>
+        </div>
+     </div><br>
+     <center>
+      <div class="row">
+       <div class="col-xs-12 op">
+         <label class="input-group mb-3">
+           Altura(cm):<br><input type="text" id="altura" placeholder="EX: 180" class="text-center"/>
+          </label>
+        </div>
+      </div><br>
+      <div class="row">
+       <div class="col-xs-12 op">
+         <label class="input-group mb-3">
+           Peso(Kg):<br><input type="text" id="peso" placeholder="EX: 60" class="text-center"/>
+          </label>
+        </div>
+      </div><br>
+      <div class="row">
+       <div class="col-xs-12 op">
+         <label class="input-group mb-3">
+           Idade(Anos):<br><input type="text" id="idade" placeholder="EX: 18" class="text-center"/>
+          </label>
+        </div>
+      </div><br>
+     </center>
+      <div class="row">
+        <div class="col-xs-12">
+          <center><button type="button" class="btn btn-lg btn-success" onclick="Calcular()">Calcular</button></center>
+        </div>
       </div>
     </div>
   </div>

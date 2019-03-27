@@ -1,13 +1,40 @@
 /**/
 #txtSexo{
-  font-size:30px;
+  font-size:20px;
 }
 .op{
-  font-size:20px;
+  font-size:18px;
 }
 
 input[type="radio"] {
     -ms-transform: scale(2.5); /* IE 9 */
     -webkit-transform: scale(5.5); /* Chrome, Safari, Opera */
     transform: scale(1.5);
+}
+
+body{
+  margin: 10%;
+  color:white;
+  text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+  background-image: linear-gradient(to bottom right, #9fbfdf,#336699,#336699, #9fbfdf,#336699,#336699, #9fbfdf);
+  background-repeat: round;
+	background-attachment: fixed;
+}
+
+button{
+  border-radius: 10px;
+  background-color: black;
+  
+}
+
+input[type="text"]{
+  color: black;
+}
+
+.linha{
+  margin-top: 12px;
+}
+#altura,#peso,#idade{
+  border-radius: 10px;
+  width: 200px;
 }
